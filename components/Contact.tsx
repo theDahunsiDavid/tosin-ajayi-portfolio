@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "motion/react";
 import { Mail, Linkedin, Github, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -37,11 +39,12 @@ export function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="mb-4">Let's Work Together</h2>
+          <h2 className="mb-4">Let&apos;s Work Together</h2>
           <div className="w-20 h-1 bg-white mx-auto rounded-full mb-6" />
           <p className="text-slate-300 max-w-2xl mx-auto">
-            I'm always interested in hearing about new projects and opportunities. 
-            Whether you have a question or just want to say hello, feel free to get in touch.
+            I&apos;m always interested in hearing about new projects and
+            opportunities. Whether you have a question or just want to say
+            hello, feel free to get in touch.
           </p>
         </motion.div>
 
@@ -54,14 +57,17 @@ export function Contact() {
           >
             <h3 className="mb-6">Get In Touch</h3>
             <p className="text-slate-300 mb-8">
-              I'm currently available for freelance projects and full-time opportunities. 
-              Let's create something amazing together.
+              I&apos;m currently available for freelance projects and full-time
+              opportunities. Let&apos;s create something amazing together.
             </p>
 
             <div className="space-y-4 mb-8">
               <div>
                 <p className="text-slate-400 mb-1">Email</p>
-                <a href="mailto:alex.thompson@example.com" className="text-white hover:text-slate-300 transition-colors">
+                <a
+                  href="mailto:alex.thompson@example.com"
+                  className="text-white hover:text-slate-300 transition-colors"
+                >
                   alex.thompson@example.com
                 </a>
               </div>
@@ -102,13 +108,15 @@ export function Contact() {
                   id="name"
                   type="text"
                   value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
                   required
                   className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-500"
                   placeholder="Your name"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="email" className="block text-slate-300 mb-2">
                   Email
@@ -117,13 +125,15 @@ export function Contact() {
                   id="email"
                   type="email"
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                   required
                   className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-500"
                   placeholder="your.email@example.com"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-slate-300 mb-2">
                   Message
@@ -131,14 +141,16 @@ export function Contact() {
                 <Textarea
                   id="message"
                   value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
                   required
                   rows={6}
                   className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-500 resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
-              
+
               <Button
                 type="submit"
                 size="lg"
