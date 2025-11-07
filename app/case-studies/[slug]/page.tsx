@@ -1,6 +1,6 @@
 "use client";
 
-import { notFound, useRouter } from "next/navigation";
+import { notFound } from "next/navigation";
 import { CaseStudyDetail } from "@/components/CaseStudyDetail";
 import { Navigation } from "@/components/Navigation";
 import { Contact } from "@/components/Contact";
@@ -11,7 +11,6 @@ interface PageProps {
 }
 
 export default function CaseStudyPage({ params }: PageProps) {
-  const router = useRouter();
   const caseStudy = getCaseStudyBySlug(params.slug);
 
   if (!caseStudy) {
@@ -25,14 +24,10 @@ export default function CaseStudyPage({ params }: PageProps) {
     color: "slate",
   };
 
-  const handleBack = () => {
-    router.push("/#work");
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <CaseStudyDetail caseStudy={caseStudyData} onBack={handleBack} />
+      <CaseStudyDetail caseStudy={caseStudyData} />
       <Contact />
     </div>
   );

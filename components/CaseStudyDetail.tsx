@@ -17,6 +17,7 @@ import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import Link from "next/link";
 import { SolutionSection } from "@/components/SolutionSection";
 import { ImpactResults } from "@/components/ImpactResults";
 import { LowFidelityWireframes } from "./finpay/LowFidelityWireframes";
@@ -58,10 +59,9 @@ interface CaseStudyDetailProps {
     outcome?: string;
     detail: Record<string, any>;
   };
-  onBack: () => void;
 }
 
-export function CaseStudyDetail({ caseStudy, onBack }: CaseStudyDetailProps) {
+export function CaseStudyDetail({ caseStudy }: CaseStudyDetailProps) {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section - Premium Design */}
@@ -78,14 +78,15 @@ export function CaseStudyDetail({ caseStudy, onBack }: CaseStudyDetailProps) {
         </div>
 
         <div className="relative container mx-auto px-6 py-12">
-          <Button
-            onClick={onBack}
-            variant="ghost"
-            className="mb-8 text-white hover:text-white hover:bg-white/10"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Portfolio
-          </Button>
+          <Link href="/#work">
+            <Button
+              variant="ghost"
+              className="mb-8 text-white hover:text-white hover:bg-white/10"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Portfolio
+            </Button>
+          </Link>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1200,14 +1201,15 @@ export function CaseStudyDetail({ caseStudy, onBack }: CaseStudyDetailProps) {
             <h3 className="text-slate-900 mb-6">
               Interested in more projects?
             </h3>
-            <Button
-              onClick={onBack}
-              size="lg"
-              className="bg-slate-900 hover:bg-slate-800 shadow-lg"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              View More Projects
-            </Button>
+            <Link href="/#work">
+              <Button
+                size="lg"
+                className="bg-slate-900 hover:bg-slate-800 shadow-lg"
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Back to Portfolio
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>

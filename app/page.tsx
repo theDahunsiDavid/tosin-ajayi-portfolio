@@ -49,21 +49,18 @@ export default function HomePage() {
               }
 
               return (
-                <div
+                <CaseStudy
                   key={study.id}
-                  className={isComingSoon ? "cursor-default" : "cursor-pointer"}
-                >
-                  <CaseStudy
-                    title={study.title}
-                    description={study.description}
-                    image={study.image}
-                    customThumbnail={customThumbnail}
-                    tags={study.tags}
-                    outcome={study.outcome}
-                    index={index}
-                    comingSoon={isComingSoon}
-                  />
-                </div>
+                  title={study.title}
+                  description={study.description}
+                  image={study.image}
+                  customThumbnail={customThumbnail}
+                  tags={study.tags}
+                  outcome={study.outcome}
+                  index={index}
+                  comingSoon={isComingSoon}
+                  slug={study.slug}
+                />
               );
             })}
           </div>
