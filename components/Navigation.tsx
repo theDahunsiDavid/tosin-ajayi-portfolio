@@ -60,17 +60,15 @@ export function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-md"
-          : "bg-white/90 backdrop-blur-sm"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-x-hidden ${
+        isScrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-white"
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+      <div className="w-full max-w-full px-3 sm:px-6 py-4">
+        <div className="flex items-center justify-between gap-2 max-w-full">
           <Link href="/" onClick={handleHomeClick}>
             <motion.div
-              className="text-slate-900 cursor-pointer flex items-center gap-2"
+              className="text-slate-900 cursor-pointer flex items-center gap-2 flex-shrink-0"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -105,7 +103,7 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-slate-900 p-2 hover:bg-slate-100 rounded-lg transition-colors"
+            className="md:hidden text-slate-900 p-2 bg-white hover:bg-slate-50 rounded-lg transition-colors flex-shrink-0"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
