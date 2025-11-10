@@ -61,7 +61,9 @@ export function Navigation() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-transparent"
+        isScrolled
+          ? "bg-white/95 backdrop-blur-md shadow-md"
+          : "bg-white/90 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-6 py-4">
@@ -103,7 +105,8 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-slate-900"
+            className="md:hidden text-slate-900 p-2 hover:bg-slate-100 rounded-lg transition-colors"
+            aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />

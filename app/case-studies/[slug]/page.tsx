@@ -1,5 +1,3 @@
-"use client";
-
 import { notFound } from "next/navigation";
 import { CaseStudyDetail } from "@/components/CaseStudyDetail";
 import { Navigation } from "@/components/Navigation";
@@ -7,11 +5,12 @@ import { Contact } from "@/components/Contact";
 import { getCaseStudyBySlug } from "@/lib/case-studies";
 
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export default function CaseStudyPage({ params }: PageProps) {
-  const caseStudy = getCaseStudyBySlug(params.slug);
+export default async function CaseStudyPage({ params }: PageProps) {
+  const { slug } = await params;
+  const caseStudy = getCaseStudyBySlug(slug);
 
   if (!caseStudy) {
     notFound();
