@@ -13,17 +13,52 @@ export function Contact() {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission would be handled here
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! I'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message: "Thank you for your message! I'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: data.error || "Failed to send message. Please try again.",
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "An error occurred. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const socialLinks = [
-    { icon: Mail, label: "Email", href: "mailto:alex.thompson@example.com" },
+    { icon: Mail, label: "Email", href: "mailto:pritosajayi@gmail.com" },
     { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
     { icon: Github, label: "GitHub", href: "https://github.com" },
     { icon: Twitter, label: "Twitter", href: "https://twitter.com" },
@@ -65,10 +100,10 @@ export function Contact() {
               <div>
                 <p className="text-slate-400 mb-1">Email</p>
                 <a
-                  href="mailto:alex.thompson@example.com"
+                  href="mailto:pritosajayi@gmail.com"
                   className="text-white hover:text-slate-300 transition-colors"
                 >
-                  alex.thompson@example.com
+                  pritosajayi@gmail.com
                 </a>
               </div>
               <div>
@@ -155,9 +190,22 @@ export function Contact() {
                 type="submit"
                 size="lg"
                 className="w-full bg-white text-slate-900 hover:bg-slate-100"
+                disabled={isSubmitting}
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
+
+              {submitStatus.type && (
+                <div
+                  className={`mt-4 p-4 rounded-lg ${
+                    submitStatus.type === "success"
+                      ? "bg-green-900/50 text-green-100"
+                      : "bg-red-900/50 text-red-100"
+                  }`}
+                >
+                  {submitStatus.message}
+                </div>
+              )}
             </form>
           </motion.div>
         </div>
