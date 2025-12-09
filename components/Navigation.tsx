@@ -61,7 +61,7 @@ export function Navigation() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-x-hidden ${
-        isScrolled ? "bg-white/95 backdrop-blur-sm shadow-md" : "bg-white"
+        isScrolled ? "bg-white/50 backdrop-blur-md shadow-md" : "bg-white"
       }`}
     >
       <div className="w-full max-w-full px-3 sm:px-6 py-4">
@@ -103,7 +103,11 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-slate-900 p-2 bg-white hover:bg-slate-50 rounded-lg transition-colors flex-shrink-0"
+            className={`md:hidden text-slate-900 p-2 rounded-lg transition-colors flex-shrink-0 ${
+              isScrolled
+                ? "hover:bg-slate-900/10"
+                : "bg-white hover:bg-slate-50"
+            }`}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
