@@ -26,7 +26,7 @@ export function AboutMe() {
             </div>
           </motion.div>
 
-          <div className="grid lg:grid-cols-[280px,1fr] gap-8 items-start">
+          <div className="grid lg:grid-cols-[280px_1fr] gap-8 items-start">
             {/* Left Column - Image & Stats */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -37,8 +37,8 @@ export function AboutMe() {
             >
               <div className="relative rounded-2xl overflow-hidden aspect-square shadow-xl">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjE1NjQ3NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="UI/UX Designer"
+                  src="/priscilla-ajayi-profile-picture.jpeg"
+                  alt="Picture of Priscilla Tosin Ajayi"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
