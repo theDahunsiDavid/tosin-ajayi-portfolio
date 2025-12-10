@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing UX/UI design work and case studies. Built with Next.js 15, TypeScript, and Tailwind CSS.
 
-## 🎨 About
+## About
 
 This portfolio highlights the work of Priscilla Ajayi, a Senior UI/UX Designer with 5+ years of experience designing accessible, user-centered digital products across Fintech, Healthcare, and E-commerce sectors.
 
@@ -16,7 +16,7 @@ This portfolio highlights the work of Priscilla Ajayi, a Senior UI/UX Designer w
 - **Accessible**: Follows WCAG guidelines for accessibility
 - **Component Library**: Uses Radix UI and shadcn/ui for robust, accessible components
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -83,7 +83,7 @@ tosin-ajayi-portfolio/
 
 ```
 
-## 🎯 Case Studies
+## Case Studies
 
 The portfolio includes detailed case studies for:
 
@@ -94,7 +94,7 @@ The portfolio includes detailed case studies for:
 5. **FoodHub** - Food Delivery App (Coming Soon)
 6. **FitPro** - Fitness Tracking Application (Coming Soon)
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
@@ -104,14 +104,14 @@ The portfolio includes detailed case studies for:
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Deployment**: [Vercel](https://vercel.com/)
 
-## 📝 Available Scripts
+## Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Create production build
 - `npm start` - Start production server
 - `npm run lint` - Run ESLint
 
-## 🚢 Deployment
+## Deployment
 
 ### Deploy to Vercel (Recommended)
 
@@ -124,14 +124,15 @@ The portfolio includes detailed case studies for:
 
 ### Environment Variables
 
-No environment variables are required for basic deployment. If you add analytics or contact form integrations, create a `.env.local` file:
+For the contact form to work, you need to set up a Resend API key. Create a `.env.local` file:
 
 ```bash
-# Example
-NEXT_PUBLIC_ANALYTICS_ID=your_analytics_id
+# Resend API Key for contact form
+# Get your API key from: https://resend.com/api-keys
+RESEND_API_KEY=your_resend_api_key_here
 ```
 
-## 🔧 Customization
+## Customization
 
 ### Update Contact Information
 
@@ -155,11 +156,11 @@ Edit `components/Hero.tsx` and `components/AboutMe.tsx` to update:
 - Skills and expertise
 - Professional achievements
 
-## 📄 License
+## License
 
 This portfolio is for personal use by Priscilla Ajayi. All rights reserved.
 
-## 🤝 Support
+## Support
 
 For questions or issues, please contact through the portfolio website's contact form.
 
