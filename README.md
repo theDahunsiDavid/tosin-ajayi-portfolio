@@ -28,7 +28,7 @@ This portfolio highlights the work of Priscilla Ajayi, a Senior UI/UX Designer w
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd portfolio-nextjs
+cd tosin-ajayi-portfolio
 ```
 
 2. Install dependencies:
@@ -54,7 +54,7 @@ pnpm dev
 ## 📁 Project Structure
 
 ```
-portfolio-nextjs/
+tosin-ajayi-portfolio/
 ├── app/                      # Next.js App Router pages
 │   ├── case-studies/        # Dynamic case study routes
 │   ├── layout.tsx           # Root layout with metadata
@@ -119,8 +119,7 @@ The portfolio includes detailed case studies for:
 2. Go to [vercel.com](https://vercel.com) and sign in
 3. Click "Add New" → "Project"
 4. Import your repository
-5. Set **Root Directory** to `portfolio-nextjs` (important!)
-6. Click "Deploy"
+5. Click "Deploy"
 7. Your site will be live in 2-3 minutes!
 
 ### Environment Variables
