@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   title: "Priscilla Ajayi - UX/UI Designer Portfolio",
   description:
     "UX/UI Designer specializing in mobile banking, fintech, and user-centered design. View my case studies and design work.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "Priscilla Ajayi - UX/UI Designer Portfolio",
     description:
