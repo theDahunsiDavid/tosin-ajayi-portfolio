@@ -67,8 +67,8 @@ export function AboutMe() {
               <div>
                 <p className="text-slate-700 text-lg leading-relaxed mb-4">
                   My design philosophy centers on empathy and inclusivity. I
-                  believe great design solves real problems for real
-                  people—especially those often overlooked.
+                  believe great design solves real problems for real people,
+                  especially those often overlooked.
                 </p>
 
                 <p className="text-slate-600 leading-relaxed">
