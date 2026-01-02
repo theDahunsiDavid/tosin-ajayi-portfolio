@@ -933,7 +933,7 @@ export const caseStudies: CaseStudy[] = [
       },
       problemStatement: {
         challenge:
-          "NHS GP surgeries were overwhelmed with phone calls—78% for routine tasks like appointment bookings. Elderly patients (the primary demographic) struggled with existing digital services due to small text, confusing navigation, and medical jargon. This created a barrier to care and increased surgery workload.",
+          "NHS GP surgeries were overwhelmed with phone calls: 78% for routine tasks like appointment bookings. Elderly patients (the primary demographic) struggled with existing digital services due to small text, confusing navigation, and medical jargon. This created a barrier to care and increased surgery workload.",
         context:
           "The NHS Digital Transformation agenda required GP surgeries to offer online services, but existing portals had <15% adoption among 60+ users. With an aging population and limited surgery staff, creating an accessible digital solution was critical to sustainable healthcare delivery.",
         userNeeds: [
@@ -992,7 +992,7 @@ export const caseStudies: CaseStudy[] = [
           },
         ],
         keyInsight:
-          "All existing NHS portals failed to optimize for elderly users—the demographic that uses healthcare services most frequently. By designing specifically for 60+ patients with AAA accessibility, plain language alternatives, and reassuring interaction patterns, HealthHub could achieve 3-4x higher adoption rates than competitors among this critical underserved audience.",
+          "All existing NHS portals failed to optimize for elderly users, the demographic that uses healthcare services most frequently. By designing specifically for 60+ patients with AAA accessibility, plain language alternatives, and reassuring interaction patterns, HealthHub could achieve 3-4x higher adoption rates than competitors among this critical underserved audience.",
       },
       challenge:
         "The NHS Trust needed a digital patient portal to reduce administrative burden and improve patient engagement. The primary challenge was designing for an elderly demographic (60+ years) who had varying levels of digital literacy. The portal needed to handle sensitive health information whilst remaining simple enough for all users.",
@@ -1225,7 +1225,7 @@ export const caseStudies: CaseStudy[] = [
               "Stakeholder workshops",
             ],
             outcomes:
-              "Identified that 67% of patients wanted digital access to health records but feared making mistakes. Competitor analysis revealed all existing portals suffered from medical jargon and complex navigation—creating my opportunity for differentiation.",
+              "Identified that 67% of patients wanted digital access to health records but feared making mistakes. Competitor analysis revealed all existing portals suffered from medical jargon and complex navigation, creating my opportunity for differentiation.",
           },
           {
             name: "Define & Synthesise",
@@ -1285,7 +1285,7 @@ export const caseStudies: CaseStudy[] = [
               "Final validation",
             ],
             outcomes:
-              "Achieved 94% task success rate with 65+ users, 95% satisfaction rating, and full WCAG AAA compliance—validating our co-design approach.",
+              "Achieved 94% task success rate with 65+ users, 95% satisfaction rating, and full WCAG AAA compliance, validating our co-design approach.",
           },
         ],
       },
@@ -1316,11 +1316,11 @@ export const caseStudies: CaseStudy[] = [
         tools: ["Figma", "UserTesting", "Mixpanel", "Amplitude", "Miro"],
         timeline: "36 weeks (Aug 2023 - Apr 2024)",
         objective:
-          "Design a dual-sided fitness coaching platform that connects certified trainers with clients through personalized workouts, progress tracking, and accountability features—achieving 70%+ 3-month retention in a market with 15% average retention.",
+          "Design a dual-sided fitness coaching platform that connects certified trainers with clients through personalized workouts, progress tracking, and accountability features to achieve 70%+ 3-month retention in a market with 15% average retention.",
       },
       problemStatement: {
         challenge:
-          "The fitness app market had 15% average 3-month retention—users abandoned generic workout apps within 3 weeks due to lack of personalization and accountability. Trainers wanted to offer online coaching but existing platforms required manual workout creation for each client, making it unsustainable.",
+          "The fitness app market had 15% average 3-month retention. Users abandoned generic workout apps within 3 weeks due to lack of personalization and accountability. Trainers wanted to offer online coaching but existing platforms required manual workout creation for each client, making it unsustainable.",
         context:
           "Post-pandemic fitness shifted online, creating demand for virtual coaching. However, existing apps were either impersonal (like Nike Training Club) or required expensive one-on-one video sessions. The opportunity was to create scalable personalized coaching at accessible prices.",
         userNeeds: [
@@ -1379,7 +1379,7 @@ export const caseStudies: CaseStudy[] = [
           },
         ],
         keyInsight:
-          "A massive market gap existed between free generic apps (Nike Training Club) suffering 70%+ abandonment and expensive 1-on-1 coaching (Future at £150/mo). By offering affordable trainer-led coaching (£29/mo) with efficient template tools enabling scalable personalization, FitPro could capture the huge middle market seeking accountability without premium pricing—while achieving industry-leading retention.",
+          "A massive market gap existed between free generic apps (Nike Training Club) suffering 70%+ abandonment and expensive 1-on-1 coaching (Future at £150/mo). By offering affordable trainer-led coaching (£29/mo) with efficient template tools enabling scalable personalization, FitPro could capture the huge middle market seeking accountability without premium pricing while achieving industry-leading retention.",
       },
       challenge:
         "The fitness app market was saturated with generic workout apps that users abandoned after weeks. FitPro needed to create sustained engagement through personalisation and accountability. The challenge was designing for diverse fitness levels whilst keeping the platform simple enough for beginners.",
@@ -1443,7 +1443,7 @@ export const caseStudies: CaseStudy[] = [
         ],
         testimonial: {
           quote:
-            "FitPro transformed my online coaching business. I went from managing 8 clients manually to 35 clients efficiently. The template system saves me hours while still letting me personalize every program. My clients are more engaged than ever—they actually stick with it.",
+            "FitPro transformed my online coaching business. I went from managing 8 clients manually to 35 clients efficiently. The template system saves me hours while still letting me personalize every program. My clients are more engaged than ever, and they actually stick with it.",
           author: "Tom Richardson",
           role: "Certified Personal Trainer, FitPro Coach",
         },
@@ -1609,7 +1609,7 @@ export const caseStudies: CaseStudy[] = [
               "6-week longitudinal study (12 participants)",
             ],
             outcomes:
-              "Discovered that 73% abandon due to lack of accountability and personalisation, not lack of content. Identified that human trainer connection was the missing ingredient in all generic fitness apps—our key differentiator.",
+              "Discovered that 73% abandon due to lack of accountability and personalisation, not lack of content. Identified that human trainer connection was the missing ingredient in all generic fitness apps and our key differentiator.",
           },
           {
             name: "Define & Frame",
