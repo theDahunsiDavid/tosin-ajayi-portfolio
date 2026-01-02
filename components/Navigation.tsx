@@ -9,6 +9,7 @@ import { usePathname, useRouter } from "next/navigation";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isAtBottom, setIsAtBottom] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
@@ -16,7 +17,11 @@ export function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const scrolled = window.scrollY > 50;
+      const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 10;
+
+      setIsScrolled(scrolled);
+      setIsAtBottom(atBottom);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -61,7 +66,7 @@ export function Navigation() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-x-hidden ${
-        isScrolled ? "bg-white/50 backdrop-blur-md shadow-md" : "bg-white"
+        isScrolled && !isAtBottom ? "bg-white/50 backdrop-blur-md shadow-md" : "bg-white"
       }`}
     >
       <div className="w-full max-w-full px-3 sm:px-6 py-4">
@@ -104,7 +109,7 @@ export function Navigation() {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`md:hidden text-slate-900 p-2 rounded-lg transition-colors flex-shrink-0 ${
-              isScrolled
+              isScrolled && !isAtBottom
                 ? "hover:bg-slate-900/10"
                 : "bg-white hover:bg-slate-50"
             }`}
