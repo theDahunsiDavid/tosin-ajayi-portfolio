@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
     // Send email using Resend
     const { data, error } = await resend.emails.send({
       from: "Portfolio Contact Form <onboarding@resend.dev>", // Use your verified domain once set up
-      to: "pritosajayi@gmail.com", // Your Resend account email (change to client's email in production after domain verification)
+      to: "tosiajayi@gmail.com", // Your Resend account email (change to client's email in production after domain verification)
       replyTo: email,
       subject: `New Contact Form Message from ${name}`,
       html: `
